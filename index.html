@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<div class="container">
+  <h1 class="login-title" align="center">Login</h1>
+  <br>
+  <section class="input-box">
+    <input type="text" id="n1"name="username" placeholder="Username">
+    <i class='bx bxs-user'></i>
+  </section>
+  <br>
+  <section class="input-box">
+    <input type="password"id="n2" name="password" placeholder="Password">
+    <i class='bx bxs-lock-alt'></i>
+  </section>
+  <section class="remember-forgot-box">
+    <div class="remember-me">
+      <input type="checkbox" name="remember-me" id="remember-me">
+      <label for="remember-me">
+        <h5>Remember me</h5>
+      </label>
+    </div>
+    <a class="forgot-password" href="forgetpassword.html">
+      <h5>Forgot password?</h5>
+    </a>
+  </section>
+  <button class="login-button"onclick="func()" type="submit">
+    Login
+  </button>
+  <h5 class="dont-have-an-account">
+    Don't have an account?
+    <a href="registration.html"><b>Register</b></a> </h5>
+<script>
+  function func()
+  {
+    let n1=document.getElementById("n1").value;
+    let n2=document.getElementById("n2").value;
+    if((n1==="Harsh Kumar Singh") && (n2==="12345"))
+    {
+      alert("Welcome"+" " + n1);
+       window.location.href="index2.html";
+    }
+    else if((n1=="") &&(n2==""))
+    {
+     alert("Enter username and password")
+    }
+    else
+      alert("Incorrect username or password ")
+
+  }
+</script>
+<body>
+</html>
